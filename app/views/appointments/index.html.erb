@@ -1,0 +1,21 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Appointments</h1>
+
+<div id="appointments">
+  <table>
+    <tr>
+      <th><%= beatiful_title_summary %></th>
+      <th colspan="2">Actions</th>
+    </tr>
+    <% @appointments.each do |appointment| %>
+      <tr>
+        <td><%= appointment.summary %></td>
+        <td><%= link_to "Show", appointment %></td>
+        <td><%= link_to "Edit", edit_appointment_path(appointment) %></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+
+<%= link_to "New appointment", new_appointment_path %>
